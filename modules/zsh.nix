@@ -25,6 +25,10 @@
     ];
     initContent = ''
       ZVM_VI_INSERT_ESCAPE_BINDKEY=jj
+      # mitigate the nix shell default shell issue
+      ns() {
+          nix shell "nixpkgs#$1" --command zsh
+      }
     '';
   };
 
