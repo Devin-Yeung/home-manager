@@ -26,4 +26,13 @@
       ZVM_VI_INSERT_ESCAPE_BINDKEY=jj
     '';
   };
+
+  programs.starship = {
+    enable = true;
+    settings = {
+      container = {
+        disabled = true;
+      };
+    };
+  };
 }
