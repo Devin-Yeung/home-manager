@@ -39,6 +39,7 @@
           modules = [
             ./modules/general.nix
             ./modules/utils.nix
+            ./modules/zsh.nix
           ];
         };
     in
