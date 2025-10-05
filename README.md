@@ -20,6 +20,9 @@ use following command to set `zsh` as default login shell:
 sudo chsh -s $(which zsh)
 ```
 
+Unfortunately, `nix shell` will still revert back to the default shell (bash),
+and it's almost impossible to fix without moving to a NixOS distribution.
+
 ## Rebuild
 
 We recommend you to put the home-manager flake under `/etc/home-manager/` directory,
@@ -37,3 +40,7 @@ home-manager switch --flake '/etc/home-manager#<config>'
 # or using the alias we provided
 rebuild
 ```
+
+## Future Plans
+
+- [ ] Move towards [system-manager](https://github.com/numtide/system-manager) for better integration with non-NixOS systems.
