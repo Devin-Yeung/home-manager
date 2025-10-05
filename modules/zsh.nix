@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, extra, ... }:
 {
 
   home.packages = with pkgs; [
@@ -14,7 +14,7 @@
       lg = "${pkgs.lazygit}/bin/lazygit";
       ls = "${pkgs.eza}/bin/eza";
       gc = "nix-collect-garbage";
-      rebuild = "home-manager switch --flake /etc/home-manager#orbstack";
+      rebuild = "home-manager switch --flake /etc/home-manager#${extra.host}";
     };
     plugins = [
       {
